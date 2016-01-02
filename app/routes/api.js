@@ -1,6 +1,8 @@
 var express = require('express');
+var jwt = require('jsonwebtoken');
 var User = require('../models/user');
 var apiRouter = express.Router();
+var superSecret = 'JamesonsIsMyFavoriteDrink';
 
 apiRouter.use(function (req, res, next) {
     console.log('Somebody just came to our app');
